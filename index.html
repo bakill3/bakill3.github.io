@@ -1,402 +1,456 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gabriel Brandão — Software Engineer</title>
-  <meta name="description" content="Full-stack engineer shipping privacy-first, scalable software. 200k+ downloads; PHP/JS, EDA/CQRS, local LLMs, Android/iOS." />
-  <meta name="theme-color" content="#1e2833" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gabriel Brandão — Software Engineer" />
-  <meta property="og:description" content="Full-stack engineer shipping privacy-first, scalable software. 200k+ downloads; PHP/JS, EDA/CQRS, local LLMs, Android/iOS." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og.jpg" />
-  <meta property="og:url" content="https://bakill3.github.io/" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script>document.documentElement.classList.replace('no-js','js')</script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+<x-dc>
+<helmet>
+<title>Gabriel Brandão - Software Engineer</title>
+<meta name="description" content="Gabriel Brandão, software engineer in Portugal. Full-stack, mobile and backend: Rust, Flutter, Swift, React, Node.js and PHP. Builder of Shoto and Scala on the App Store.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bakill3.github.io/">
+<meta property="og:title" content="Gabriel Brandão — Software Engineer">
+<meta property="og:description" content="Full-stack, mobile and backend engineer building products end to end. Rust, Flutter, Swift, React, Node.js, PHP.">
+<meta property="og:image" content="https://bakill3.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gabriel Brandão — Software Engineer">
+<meta name="twitter:description" content="Full-stack, mobile and backend engineer building products end to end.">
+<meta name="twitter:image" content="https://bakill3.github.io/assets/img/og.jpg">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/img/avatar.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#0a0a0a; color:#ededed; font-family:'Geist',sans-serif; -webkit-font-smoothing:antialiased; --accent:#ff5a1f; overflow-x:hidden; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { color:var(--accent); }
+  ::selection { background:var(--accent); color:#0a0a0a; }
+  [data-strip]::-webkit-scrollbar { display:none; }
+</style>
+</helmet>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="wrap nav-wrap">
-      <a class="brand" href="#top" aria-label="Home"></a>
+<div data-cursor="" style="position:fixed;left:0;top:0;z-index:60;pointer-events:none;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:grid;place-items:center;font-family:'Geist Mono',monospace;font-size:12px;font-weight:500;scale:0;transition:scale .35s cubic-bezier(.16,1,.3,1)">View ↗</div>
 
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a class="btn small interactive" href="assets/docs/Gabriel-Brandao-Resume-3.pdf" target="_blank" rel="noopener">Resume</a>
-      </nav>
+<nav style="position:fixed;top:16px;left:50%;translate:-50% 0;z-index:50;display:flex;align-items:center;gap:2px;padding:5px;border:1px solid #262626;border-radius:999px;background:rgba(12,12,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;white-space:nowrap;max-width:calc(100vw - 24px);box-sizing:border-box">
+  <a href="#apps" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Work</a>
+  <a href="#experience" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Experience</a>
+  <a href="#contact" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Contact</a>
+  <a href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="padding:8px 14px;border-radius:999px;background:#ededed;color:#0a0a0a;font-weight:500" style-hover="background:var(--accent);color:#0a0a0a">CV ↓</a>
+</nav>
 
-      <!-- Mobile menu -->
-      <button class="hamburger interactive" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-      <div id="mobile-menu" class="sheet" hidden>
-        <div class="sheet-panel" role="dialog" aria-modal="true" aria-label="Menu">
-          <button class="sheet-close interactive" aria-label="Close menu">✕</button>
-          <nav class="sheet-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-            <a class="btn block interactive" href="assets/docs/Gabriel-Brandao-Resume-3.pdf" target="_blank" rel="noopener">Resume</a>
-          </nav>
-        </div>
-        <!-- backdrop intentionally hidden -->
-        <div class="sheet-backdrop" data-close></div>
+<!-- HERO -->
+<section id="top" data-screen-label="Hero" data-hero="" style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:clamp(32px,5vh,48px);padding:110px clamp(20px,5vw,72px) 32px;box-sizing:border-box;overflow:hidden">
+  <canvas data-field="" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  <div style="position:relative;max-width:1240px;width:100%;margin:0 auto;pointer-events:none">
+    <div data-intro="" style="display:flex;align-items:center;gap:14px;margin-bottom:36px">
+      <img src="assets/img/avatar.jpg" alt="Gabriel Brandão" style="width:44px;height:44px;border-radius:50%;object-fit:cover">
+      <div style="line-height:1.3">
+        <div style="font-size:15px;font-weight:500">Full-stack · Mobile · Backend</div>
+        <div style="font-size:13px;color:#a1a1a1">Based in Ovar, Portugal</div>
       </div>
     </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div class="hero-text">
-          <h1 class="title">
-            <span class="gradient">Gabriel Brandão</span>
-            <span class="subtitle-line">Software Engineer</span>
-          </h1>
-          <p class="subtitle">
-            Full-stack developer focused on <strong>privacy-first</strong>, <strong>scalable</strong> software.
-            I’ve shipped products with <strong>200k+ downloads</strong> and build across <strong>PHP/JS</strong>,
-            event-driven systems, and mobile. I care about speed, clarity, and craft.
-          </p>
-
-          <!-- interactive tech pills -->
-          <div class="badges">
-            <button class="pill">PHP</button><button class="pill">JavaScript</button><button class="pill">React</button><button class="pill">Node</button>
-            <button class="pill">EDA/CQRS</button><button class="pill">Kubernetes</button><button class="pill">Python</button><button class="pill">C#</button>
-            <button class="badge-more interactive" data-modal="skills-modal" aria-haspopup="dialog" aria-controls="skills-modal" aria-expanded="false" title="See full stack">+ More</button>
-          </div>
-
-          <div class="actions">
-            <a href="#projects" class="btn xl interactive">See projects</a>
-            <a href="#contact" class="btn ghost xl interactive">Work with me</a>
-          </div>
-          <div class="social">
-            <a class="link-underline interactive" href="https://github.com/bakill3" target="_blank" rel="noopener">GitHub</a>
-            <a class="link-underline interactive" href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="link-underline interactive" href="mailto:deostulti2@gmail.com">Email</a>
-          </div>
-        </div>
-
-        <!-- art -->
-        <div class="hero-art" aria-hidden="true">
-          <div class="orb lg"></div><div class="orb md"></div><div class="orb sm"></div>
-          <div class="grid-bg"></div>
-          <img class="avatar" src="assets/img/avatar.jpg" alt="">
-        </div>
+    <h1 style="font-family:'Geist',sans-serif;font-weight:500;font-size:clamp(40px,7.4vw,116px);line-height:1;letter-spacing:-0.05em;margin:0;max-width:15ch;text-wrap:balance">
+      <span data-word="" style="display:inline-block;opacity:0">Gabriel</span> <span data-word="" style="display:inline-block;opacity:0">Brandão.</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">Software</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">engineer</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">building</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">products</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">end</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">to</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">end.</span>
+    </h1>
+  </div>
+  <div data-intro="" style="position:relative;max-width:1240px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:24px;max-width:520px">
+      <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#a1a1a1;text-wrap:pretty">Shipping software since 2017: web platforms, event-driven backends and mobile apps across Rust, Flutter, Swift, React, Node and PHP, for startups, scale-ups and my own products with 200K+ downloads.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="padding:14px 22px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="background:#ededed;color:#0a0a0a">Download CV ↓</a>
+        <a data-magnetic="" href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px" style-hover="border-color:#ededed;color:#ededed">LinkedIn ↗</a>
+        <a data-magnetic="" href="mailto:deostulti2@gmail.com" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px" style-hover="border-color:#ededed;color:#ededed">Email me</a>
       </div>
-    </section>
-
-    <!-- FACTS -->
-    <section class="facts section band">
-      <div class="wrap">
-        <ul class="facts-grid">
-          <li class="fact reveal"><strong>200k+</strong><span>product downloads</span></li>
-          <li class="fact reveal"><strong>100k+ views</strong><span>Reddit traffic to projects</span></li>
-          <a href="https://github.com/bakill3/maze-of-me" target="_blank"><li class="fact reveal"><strong>Maze of Me</strong><span>praised by Meta for Developers</span></li></a>
-          <li class="fact reveal"><strong>Local-first AI</strong><span>privacy by default</span></li>
-          <li class="fact reveal"><strong>EDA/CQRS</strong><span>event-driven background</span></li>
-          <li class="fact reveal"><strong>Mobile</strong><span>Android & iOS shipped</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section band alt">
-      <div class="wrap">
-        <h2 class="section-title reveal">About me</h2>
-        <p class="lead reveal">
-          I’m a builder who enjoys turning raw ideas into clean, fast software with a crisp UX. I bias toward privacy-first choices,
-          measurable performance, and shipping. I’ve worked across web, APIs, and mobile. Off the clock I hack on local-AI tools,
-          tinker with hardware, walk to reset my head, play piano, read tech/history & hang out with friends 🍻
-        </p>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section band">
-      <div class="wrap">
-        <h2 class="section-title reveal">Highlighted projects</h2>
-        <div class="bento">
-          <!-- project cards -->
-          <article class="card span-2 tilt reveal">
-            <header><h3>ChatMind</h3>
-              <p>Local-first AI that mirrors your writing style from chat history.</p>
-            </header>
-            <ul class="meta"><li>PHP</li><li>MySQL</li><li>Local LLM</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/chatmind" target="_blank" rel="noopener">Repo →</a>
-          </article>
-
-          <article class="card gradient reveal tilt">
-            <header><h3>Maze of Me</h3>
-              <p>Psychological CLI game using Spotify/Google data with AI NPCs.</p>
-            </header>
-            <ul class="meta"><li>Python</li><li>OAuth</li><li>LLM</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/maze-of-me" target="_blank" rel="noopener">Repo →</a>
-          </article>
-
-          <article class="card reveal tilt">
-            <header><h3>Tap&Go</h3>
-              <p>NFC reviews + analytics (Maps/TripAdvisor). Discounts & dashboards.</p>
-            </header>
-            <ul class="meta"><li>PHP</li><li>NFC</li><li>Bootstrap</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/Tap_and_Go" target="_blank" rel="noopener">Repo →</a>
-              <a class="more link-underline interactive" href="https://tapgotech.com/" target="_blank" rel="noopener">Visit →</a>
-          </article>
-
-          <article class="card reveal tilt">
-            <header><h3>Anchorly</h3>
-              <p>Chrome extension: highlight & jump back to saved text on any page.</p>
-            </header>
-            <ul class="meta"><li>Chrome</li><li>JS</li><li>Privacy</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/anchorly" target="_blank" rel="noopener">Repo →</a>
-              <a class="more link-underline interactive" href="https://chromewebstore.google.com/detail/anchorly/gkidejbpflnmjbdkpmpfehchlamchhej" target="_blank" rel="noopener">Install →</a>
-          </article>
-
-          <article class="card reveal tilt">
-            <header><h3>AMS</h3>
-              <p>Secure messaging with true randomness (random.org) + AES-256-CBC.</p>
-            </header>
-            <ul class="meta"><li>PHP</li><li>Redis</li><li>Docker</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/AMS" target="_blank" rel="noopener">Repo →</a>
-          </article>
-
-          <article class="card span-2 reveal tilt">
-            <header><h3>StoryStalkers</h3>
-              <p>Instagram Story Viewer app with 200k+ downloads (2019–2020).</p>
-            </header>
-            <ul class="meta"><li>PHP</li><li>Java</li><li>Firebase</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/StoryStalkers" target="_blank" rel="noopener">Repo →</a>
-          </article>
-
-          <article class="card reveal tilt">
-            <header><h3>Social Network</h3>
-              <p>Learning project: real-time messaging, notif, lazy load, SEO wins.</p>
-            </header>
-            <ul class="meta"><li>PHP</li><li>jQuery</li><li>MySQL</li></ul>
-              <a class="more link-underline interactive" href="https://github.com/bakill3/social_network" target="_blank" rel="noopener">Repo →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE + EDUCATION -->
-    <section id="experience" class="section band alt">
-      <div class="wrap">
-        <h2 class="section-title reveal">Experience & education</h2>
-
-        <div class="exp-edu">
-          <!-- Experience (stacked, prettier) -->
-          <div class="timeline" id="timeline">
-            <a href="https://www.xcope.ai/" target="_blank">
-            <article class="job reveal">
-              <h3>Full Stack Engineer — XCOPE AI <span class="muted">(Dez 2025 → Jun 2026)</span></h3>
-              <ul>
-                <li>Developed backend and mobile applications using Rust, Flutter and NATS.</li>
-              </ul>
-            </article>
-            </a>
-            <a href="https://www.atlistis.com/" target="_blank">
-            <article class="job reveal">
-              <h3>Full Stack Developer — Atlistis <span class="muted">(Oct 2024 → Oct 2025)</span></h3>
-              <ul>
-                <li>React, Node, Sharetribe; CI/CD via GitHub Actions; Render deploys.</li>
-                <li>Kotlin/Swift apps with Firebase/APNs; Stripe Webhooks & InvoiceXpress.</li>
-                <li>Bookings calendar refactor; hotel sync (HyperGuest); SEO/UX polish.</li>
-              </ul>
-            </article>
-            </a>
-
-            <a href="https://learnship.com/" target="_blank">
-            <article class="job reveal">
-              <h3>Junior Software Engineer — Learnship <span class="muted">(Dec 2023 → Jun 2024)</span></h3>
-              <ul>
-                <li>PHP (Mezzio) & Node services; performance & scalability.</li>
-                <li>EDA/CQRS (Ecotone); Docker/K8s (AKS), Datadog, MS SQL Server.</li>
-              </ul>
-            </article>
-            </a>
-
-            <a href="https://alaskarecover.com/" target="_blank">
-            <article class="job reveal">
-              <h3>Lead Developer — AlaskaRecover <span class="muted">(May 2023 → Nov 2023)</span></h3>
-              <ul><li>Led tech & web; influencer endorsements; Decathlon/Amazon partnerships.</li></ul>
-            </article>
-            </a>
-
-            <a href="https://tapgotech.com/" target="_blank">
-            <article class="job reveal">
-              <h3>Founder & Developer — Tap&Go <span class="muted">(May 2023 → Nov 2023)</span></h3>
-              <ul><li>NFC reviews + analytics; discounts; cocktail recommender; SEO; marketing.</li></ul>
-            </article>
-            </a>
-
-            <article class="job reveal">
-              <h3>Freelance <span class="muted">(Apr 2020 → May 2023)</span></h3>
-              <ul><li>Custom e-commerce (Shopify/WordPress), face recognition, secure storage app.</li></ul>
-            </article>
-
-            <a href="https://github.com/bakill3/StoryStalkers" target="_blank">
-            <article class="job reveal">
-              <h3>Founder & Developer — StoryStalkers <span class="muted">(May 2019 → Mar 2020)</span></h3>
-              <ul><li>200k+ downloads; Top Viewers/Top Likes; custom API; privacy & scale lessons.</li></ul>
-            </article>
-            </a>
-
-            
-            <a href="https://webmax.pt/" target="_blank">
-            <article class="job reveal">
-              <h3>Full-Stack Intern — WebMax <span class="muted">(May 2018 → Aug 2018)</span></h3>
-              <ul><li>4 client sites; custom CMS; performance score 19.4/20.</li></ul>
-            </article>
-            </a>
-
-            <article class="job reveal">
-              <h3>Full-Stack Intern — Publimapa <span class="muted">(May 2017 → Aug 2017)</span></h3>
-              <ul><li>Corporate site + dropshipping e-commerce; score 19.2/20.</li></ul>
-            </article>
-          </div>
-
-          <!-- Year rail (hidden on mobile) -->
-          <div class="year-rail">
-            <div class="year-ticks" id="year-ticks" aria-hidden="true"></div>
-          </div>
-
-          <!-- Education (aligned spans on desktop, stacked on mobile) -->
-          <aside class="edu-rail">
-            <h3 class="edu-title">Education</h3>
-            <div class="edu-stage" id="edu-stage">
-              <button class="edu-card interactive" data-modal="modal-isec" data-start="2019" data-end="2025" title="ISEC — click for skills">
-                <strong>Computer Engineering</strong>
-                <div class="edu-meta">Instituto Superior de Engenharia de Coimbra</div>
-                <div class="edu-time">2019 — Present</div>
-              </button>
-
-              <button class="edu-card interactive" data-modal="modal-aemtg" data-start="2015" data-end="2018" title="AEMTG — click for skills">
-                <strong>Computer Systems Mgmt & Programming</strong>
-                <div class="edu-meta">AEMTG — Escola Manuel Teixeira Gomes</div>
-                <div class="edu-time">2015 — 2018</div>
-              </button>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section band">
-      <div class="wrap contact">
-        <h2 class="section-title reveal">Contact</h2>
-        <div class="cta-row">
-          <a class="btn xl interactive" href="mailto:deostulti2@gmail.com">Email me</a>
-          <a class="btn ghost xl interactive" href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener">Message on LinkedIn</a>
-          <a class="btn ghost xl interactive" href="assets/docs/Gabriel-Brandao-Resume-3.pdf" target="_blank" rel="noopener">Download Resume</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <p>© <span id="year"></span> Gabriel Brandão • Built with HTML/CSS/JS</p>
     </div>
-  </footer>
-
-  <!-- Floating Links (inline SVG so no extra assets needed) -->
-  <div class="floating-links" aria-label="Profiles">
-    <a
-    href="https://www.youtube.com/@gabrielbrandao1106"
-    target="_blank"
-    rel="noopener"
-    aria-label="YouTube"
-    style="background: rgb(255 0 0 / 60%); border-color:#ff4b4b; color:#ffffff;"
-    >
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-      <path fill="currentColor" d="M9.5 8.25v7.5L16 12l-6.5-3.75z"/>
-    </svg>
-    </a>
-    <a href="https://github.com/bakill3" target="_blank" rel="noopener" aria-label="GitHub">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.25 3.4 9.7 8.1 11.27.6.1.82-.28.82-.58v-2.03c-3.3.73-4-1.44-4-1.44-.55-1.44-1.35-1.82-1.35-1.82-1.1-.77.08-.75.08-.75 1.2.09 1.84 1.24 1.84 1.24 1.08 1.9 2.83 1.35 3.52 1.03.1-.8.42-1.35.76-1.66-2.66-.3-5.46-1.38-5.46-6.15 0-1.36.47-2.47 1.24-3.34-.13-.31-.54-1.57.12-3.26 0 0 1-.32 3.3 1.24a11.3 11.3 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.66 1.69.25 2.95.12 3.26.77.87 1.24 1.98 1.24 3.34 0 4.79-2.8 5.84-5.47 6.15.43.37.81 1.1.81 2.22v3.29c0 .3.21.7.82.58 4.7-1.57 8.1-6.02 8.1-11.27A11.5 11.5 0 0 0 12 .5Z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.06c.53-1 1.82-2 3.74-2 4 0 4.74 2.63 4.74 6V23h-4v-6.5c0-1.55-.03-3.56-2.17-3.56-2.17 0-2.5 1.7-2.5 3.45V23h-4V8.5z"/></svg>
+    <a href="#apps" style="display:flex;align-items:center;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em">
+      SCROLL
+      <span style="width:1px;height:44px;background:#262626;position:relative;overflow:hidden;display:block"><span data-scrollcue="" style="position:absolute;left:0;top:0;width:1px;height:16px;background:var(--accent);display:block"></span></span>
     </a>
   </div>
+</section>
 
-  <!-- SKILLS MODAL -->
-  <div id="skills-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="skills-title">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="document">
-      <header class="modal-head">
-        <h3 id="skills-title">Tech stack</h3>
-        <button class="modal-close interactive" data-close aria-label="Close">✕</button>
-      </header>
-      <div class="modal-body">
-        <div class="modal-grid">
-          <section><h4>Languages</h4><p>PHP, JavaScript, Python, Node.js, Bash, C, C++, C#, Java</p></section>
-          <section><h4>Web & Frameworks</h4><p>HTML, CSS, jQuery, React, Symfony, Mezzio (PHP), Express.js, Ecotone (CQRS)</p></section>
-          <section><h4>Datastores & Caches</h4><p>PostgreSQL, MySQL/MariaDB, MongoDB, Redis, EventStoreDB, Microsoft SQL Server</p></section>
-          <section><h4>Cloud & Infra</h4><p>Docker, Docker Compose, Kubernetes (AKS, Minikube), Helm, Azure, AWS (SNS/SQS, EventBridge), gRPC, Terraform</p></section>
-          <section><h4>CI/CD & Testing</h4><p>Git, GitHub Actions, PHPUnit, pytest, Karate</p></section>
-          <section><h4>AI/LLM (local)</h4><p>llama.cpp, llama-cpp-python, Ollama, LM Studio</p></section>
-          <section><h4>Observability & Security</h4><p>Datadog, Wireshark, Linux</p></section>
-          <section><h4>Mobile & Games</h4><p>Android Studio, Swift, Kotlin, Unity, Unreal</p></section>
-          <section><h4>More tools</h4><p>Raspberry Pi, Arduino, .NET, XAMPP, phpMyAdmin, Blender, FileZilla, Windows, Ubuntu, Linux Mint, Kali, Figma, Mermaid, Jira, Notion</p></section>
+<!-- MARQUEE -->
+<div style="border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;overflow:hidden;padding:20px 0;background:#0d0d0d">
+  <div data-marquee="" style="display:flex;width:max-content">
+    <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
+      <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">{{ m }}<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    </sc-for>
+  </div>
+</div>
+
+<!-- APPS -->
+<section id="apps" data-screen-label="Apps" style="padding:clamp(96px,12vw,160px) clamp(20px,5vw,72px) 40px;max-width:1384px;margin:0 auto">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,72px)">
+    <div>
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 18px">01 — ON THE APP STORE</p>
+      <h2 style="font-weight:500;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-0.05em;margin:0">Two new apps, <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">shipped solo.</span></h2>
+    </div>
+    <p style="max-width:36ch;color:#a1a1a1;font-size:16px;line-height:1.6;margin:0">Designed, built and launched end to end. Both run their intelligence on-device, so personal data stays on the phone.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <!-- SHOTO -->
+    <article data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));border:1px solid #1f1f1f;border-radius:28px;overflow:hidden;background:#101010">
+      <div style="padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;color:#737373"><span>A/01 · iOS</span><span>Photo &amp; Video</span></div>
+        <div>
+          <h3 style="font-weight:500;font-size:clamp(48px,5.6vw,80px);letter-spacing:-0.055em;line-height:.95;margin:0">Shoto</h3>
+          <p style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(22px,2.2vw,28px);margin:10px 0 0;color:#ededed">Your AI selfie photographer.</p>
         </div>
+        <p style="color:#a1a1a1;font-size:16px;line-height:1.65;margin:0;max-width:46ch;text-wrap:pretty">Prop up your iPhone, tap once, pose for eight seconds. Shoto captures the burst, scores every frame on-device for quality, timing, framing and pose, and hands back the few worth keeping.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">No photos uploaded</span>
+          <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">On-device ranking</span>
+          <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">14 languages</span>
+        </div>
+        <div style="margin-top:auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:8px">
+          <a data-magnetic="" href="https://apps.apple.com/us/app/shoto-ai-photo-picker/id6808456093" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="color:#0a0a0a;background:#ededed">View on the App Store ↗</a>
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Swift · Vision · Core ML</span>
+        </div>
+      </div>
+      <div data-fan="" style="position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(48px,6vw,80px) 0;background:#151515;overflow:hidden">
+        <div style="position:relative;width:clamp(124px,24vw,236px)">
+          <img data-fan-card="-1" src="assets/img/apps/shoto-1.webp" loading="lazy" decoding="async" alt="Shoto screenshot" style="position:absolute;inset:0;width:100%;aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.6vw,20px);box-shadow:0 30px 60px rgba(0,0,0,.5);transform-origin:50% 90%">
+          <img data-fan-card="1" src="assets/img/apps/shoto-3.webp" loading="lazy" decoding="async" alt="Shoto screenshot" style="position:absolute;inset:0;width:100%;aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.6vw,20px);box-shadow:0 30px 60px rgba(0,0,0,.5);transform-origin:50% 90%">
+          <img data-fan-card="0" src="assets/img/apps/shoto-2.webp" loading="lazy" decoding="async" alt="Shoto screenshot" style="position:relative;display:block;width:100%;aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.6vw,20px);box-shadow:0 40px 80px rgba(0,0,0,.6)">
+        </div>
+      </div>
+    </article>
+
+    <!-- SCALA -->
+    <article data-reveal="" style="border:1px solid #1f1f1f;border-radius:28px;overflow:hidden;background:#101010">
+      <div style="padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(24px,4vw,56px)">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;color:#737373"><span>A/02 · iOS + iPad</span><span>Health &amp; Fitness</span></div>
+          <div>
+            <h3 style="font-weight:500;font-size:clamp(48px,5.6vw,80px);letter-spacing:-0.055em;line-height:.95;margin:0">Scala</h3>
+            <p style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(22px,2.2vw,28px);margin:10px 0 0;color:#ededed">One daily health score you can actually read.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px;justify-content:flex-end">
+          <p style="color:#a1a1a1;font-size:16px;line-height:1.65;margin:0;max-width:50ch;text-wrap:pretty">Supplements, nutrition and routine distilled into an explainable 0–100 score. Deterministic and offline-first: every point traces back to a reason, with no black-box algorithm.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">50+ evidence-based supplements</span>
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">Lab PDF parsing</span>
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">Apple Health sync</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <a data-magnetic="" href="https://apps.apple.com/us/app/scala-daily-health-score/id6790861004" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="color:#0a0a0a;background:#ededed">View on the App Store ↗</a>
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Swift · HealthKit · SwiftUI</span>
+          </div>
+        </div>
+      </div>
+      <div data-strip="" style="overflow:hidden;padding:8px 0 clamp(28px,4vw,56px);background:#101010">
+        <div data-strip-track="" style="display:flex;gap:16px;width:max-content;padding:0 clamp(28px,4vw,56px)">
+          <sc-for list="{{ scalaShots }}" as="s" hint-placeholder-count="6">
+            <img src="{{ s }}" alt="Scala screenshot" loading="lazy" decoding="async" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)" style-hover="translate:0 -10px">
+          </sc-for>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section data-screen-label="Numbers" style="padding:64px clamp(20px,5vw,72px);max-width:1384px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(20px,3vw,40px)">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+      <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
+        <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="{{ f.n }}">{{ f.n }}</span>{{ f.suffix }}</div>
+        <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">{{ f.label }}<sc-if value="{{ f.href }}" hint-placeholder-val="{{ false }}"><a href="{{ f.href }}" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">{{ f.link }}</a></sc-if></p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" data-screen-label="Work" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,72px);max-width:1384px;margin:0 auto">
+  <div data-reveal="" style="margin-bottom:40px">
+    <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 18px">02 — SELECTED WORK</p>
+    <h2 style="font-weight:500;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-0.05em;margin:0">Side projects <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">&amp; experiments.</span></h2>
+  </div>
+  <div style="border-top:1px solid #1f1f1f">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="7">
+      <a data-reveal="" data-view="{{ p.cta }}" href="{{ p.href }}" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s" style-hover="padding-left:24px;color:var(--accent)">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">{{ p.n }}</span>
+        <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">{{ p.name }}</span>
+        <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">{{ p.desc }}</span>
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">{{ p.tag }}</span>
+      </a>
+    </sc-for>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" data-screen-label="Experience" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,72px);max-width:1384px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(40px,6vw,80px)">
+    <div>
+      <div data-reveal="" style="position:sticky;top:110px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 18px">03 — EXPERIENCE</p>
+        <h2 style="font-weight:500;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-0.05em;margin:0">Where I've <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">built things.</span></h2>
+        <p style="color:#a1a1a1;font-size:16px;line-height:1.6;max-width:38ch;margin:24px 0 0">Startups, scale-ups and my own products. Studying Computer Science &amp; Engineering at ISEC, Coimbra.</p>
+        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="display:inline-flex;margin-top:28px;padding:13px 20px;border:1px solid #333;border-radius:999px;font-size:14px" style-hover="border-color:var(--accent);color:var(--accent)">Download CV ↓</a>
+      </div>
+    </div>
+    <div data-timeline="" style="position:relative;padding-left:32px">
+      <span style="position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:#222;display:block"></span>
+      <span data-progress="" style="position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--accent);transform-origin:top;transform:scaleY(0);display:block"></span>
+      <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="9">
+        <div data-reveal="" style="position:relative;padding:0 0 44px">
+          <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+          <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">{{ j.dates }} · {{ j.place }}</p>
+          <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="{{ j.href }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:baseline;gap:8px" style-hover="color:var(--accent)">{{ j.company }}<span style="font-size:15px;color:#737373">↗</span></a></h3>
+          <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">{{ j.role }}</p>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">{{ j.summary }}</p>
+          <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">{{ j.stack }}</p>
+        </div>
+      </sc-for>
+      <div data-reveal="" style="position:relative">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">2017 – 2018 · Algarve</p>
+        <h3 style="font-weight:500;font-size:20px;letter-spacing:-0.03em;margin:0;color:#d4d4d4">Earlier: Full Stack internships</h3>
+        <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch"><a href="https://webmax.pt/" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">WebMax</a> (custom CMS and four client sites, rated 19.4/20) and <a href="https://www.facebook.com/publimapapublicidade/" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">Publimapa</a> (corporate site and dropshipping platform, rated 19.2/20).</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- EDUCATION MODALS -->
-  <div id="modal-aemtg" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="aemtg-title">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="document">
-      <header class="modal-head">
-        <h3 id="aemtg-title">AEMTG — What I learned</h3>
-        <button class="modal-close interactive" data-close aria-label="Close">✕</button>
-      </header>
-      <div class="modal-body">
-        <div class="modal-grid">
-          <section><h4>Programming</h4><p>Python, C#, JavaScript, PHP, Java, HTML/HTML5, CSS, Bootstrap, jQuery</p></section>
-          <section><h4>Systems & Networks</h4><p>Operating Systems, Linux, VMware, Communication Networks</p></section>
-          <section><h4>Databases</h4><p>MySQL, Microsoft SQL Server, SQL</p></section>
-          <section><h4>Other</h4><p>Unity, Visual Studio, Scrum, Instruction/Follow-up</p></section>
-        </div>
+<!-- EDUCATION -->
+<section id="education" data-screen-label="Education" style="padding:40px clamp(20px,5vw,72px) 40px;max-width:1384px;margin:0 auto">
+  <p data-reveal="" style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 24px">04 — EDUCATION</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px">
+      <div data-reveal="" style="border:1px solid #1f1f1f;border-radius:20px;padding:clamp(22px,3vw,32px);background:#0f0f0f;display:flex;flex-direction:column;gap:10px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0">2019 – Present · Coimbra</p>
+        <h3 style="font-weight:500;font-size:clamp(20px,2vw,24px);letter-spacing:-0.03em;line-height:1.2;margin:0">Computer Science and Engineering</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#a1a1a1">Instituto Superior de Engenharia de Coimbra (ISEC)</p>
+      </div>
+      <div data-reveal="" style="border:1px solid #1f1f1f;border-radius:20px;padding:clamp(22px,3vw,32px);background:#0f0f0f;display:flex;flex-direction:column;gap:10px">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0">2015 – 2018 · Portimão</p>
+        <h3 style="font-weight:500;font-size:clamp(20px,2vw,24px);letter-spacing:-0.03em;line-height:1.2;margin:0">Professional Course in Computer Systems Management and Advanced Programming</h3>
+        <p style="margin:0;font-size:15px;line-height:1.55;color:#a1a1a1">Escola Manuel Teixeira Gomes</p>
+      </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="skills" data-screen-label="Skills" style="padding:40px clamp(20px,5vw,72px) clamp(80px,10vw,140px);max-width:1384px;margin:0 auto">
+  <p data-reveal="" style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 24px">05 — SKILLS</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
+    <sc-for list="{{ stack }}" as="s" hint-placeholder-count="4">
+      <div data-reveal="" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s" style-hover="border-color:#3a3a3a">
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">{{ s.group }}</p>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">{{ s.items }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" data-screen-label="Contact" style="padding:clamp(80px,10vw,140px) clamp(20px,5vw,72px) 40px;border-top:1px solid #1c1c1c;overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto">
+    <p data-reveal="" style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 24px">06 — CONTACT</p>
+    <h2 data-reveal="" style="font-weight:500;font-size:clamp(48px,10vw,160px);line-height:.95;letter-spacing:-0.06em;margin:0">Let's build <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.025em;color:var(--accent)">something.</span></h2>
+    <div data-reveal="" style="display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;margin-top:56px">
+      <a data-magnetic="" href="mailto:deostulti2@gmail.com" style="display:inline-flex;align-items:center;gap:14px;padding:clamp(16px,2vw,22px) clamp(22px,3vw,34px);border-radius:999px;background:#ededed;color:#0a0a0a;font-size:clamp(16px,2vw,22px);font-weight:500;max-width:100%;box-sizing:border-box" style-hover="background:var(--accent);color:#0a0a0a">Email me <span>→</span></a>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:15px;color:#a1a1a1">
+        <a href="https://github.com/bakill3" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
+    <footer style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:100px;padding-top:24px;border-top:1px solid #1c1c1c;font-family:'Geist Mono',monospace;font-size:12px;color:#737373">
+      <span>© {{ year }} Gabriel Brandão</span>
+      <span data-clock="">Ovar, PT</span>
+    </footer>
   </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ff5a1f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ff5a1f&quot;,&quot;#c8f135&quot;,&quot;#7c9cff&quot;,&quot;#ededed&quot;]},&quot;reduceMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() { this.applyTheme(); this.cleanups = []; setTimeout(() => this.setup(), 60); }
+  componentDidUpdate() { this.applyTheme(); }
+  componentWillUnmount() { (this.cleanups || []).forEach(f => f()); }
+  applyTheme() { document.body.style.setProperty('--accent', this.props.accent ?? '#ff5a1f'); }
+  setup() {
+    const motion = !(this.props.reduceMotion ?? false) && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ease = 'cubic-bezier(.16,1,.3,1)';
+    const q = s => Array.from(document.querySelectorAll(s));
+    const on = (t, e, f, o) => { t.addEventListener(e, f, o); this.cleanups.push(() => t.removeEventListener(e, f, o)); };
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
-  <div id="modal-isec" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="isec-title">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="document">
-      <header class="modal-head">
-        <h3 id="isec-title">ISEC — What I learned</h3>
-        <button class="modal-close interactive" data-close aria-label="Close">✕</button>
-      </header>
-      <div class="modal-body">
-        <div class="modal-grid">
-          <section><h4>Core</h4><p>Software & Web Development, Full-stack Development</p></section>
-          <section><h4>Systems</h4><p>Operating Systems, Digital Systems, Assembly, C, C++</p></section>
-          <section><h4>Data</h4><p>SQL, DB Design, MySQL</p></section>
-          <section><h4>Other</h4><p>Instruction, Managed Services, Follow-up</p></section>
-        </div>
-      </div>
-    </div>
-  </div>
+    q('[data-word]').forEach((el, i) => {
+      if (!motion) { el.style.opacity = '1'; return; }
+      el.animate([{ opacity: 0, transform: 'translateY(40%)', filter: 'blur(12px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }], { duration: 1100, delay: 150 + i * 70, easing: ease, fill: 'forwards' });
+    });
+    if (motion) q('[data-intro]').forEach((el, i) => el.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, delay: i ? 1000 : 0, easing: ease, fill: 'backwards' }));
+    q('[data-scrollcue]').forEach(el => motion && el.animate([{ transform: 'translateY(-16px)' }, { transform: 'translateY(44px)' }], { duration: 1600, iterations: Infinity, easing: 'cubic-bezier(.65,0,.35,1)' }));
+    q('[data-marquee]').forEach(el => motion && el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 45000, iterations: Infinity }));
 
-  <script src="assets/js/main.js"></script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target; io.unobserve(el);
+      el.animate([{ opacity: 0, transform: 'translateY(40px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, easing: ease, fill: 'forwards' });
+      el.querySelectorAll('[data-count]').forEach(c => this.countUp(c));
+    }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    if (motion) q('[data-reveal]').forEach(el => { el.style.opacity = '0'; io.observe(el); });
+    this.cleanups.push(() => io.disconnect());
+
+    const fans = q('[data-fan]'), strips = q('[data-strip]');
+    const tl = document.querySelector('[data-timeline]'), prog = document.querySelector('[data-progress]'), dots = q('[data-tl-dot]');
+    let raf = 0;
+    const tick = () => {
+      raf = 0; const vh = innerHeight;
+      fans.forEach(f => {
+        const r = f.getBoundingClientRect();
+        let p = motion ? clamp((vh - r.top) / (vh * 0.75), 0, 1) : 1;
+        p = 1 - Math.pow(1 - p, 3);
+        f.querySelectorAll('[data-fan-card]').forEach(c => {
+          const o = +c.dataset.fanCard; if (!o) return;
+          c.style.transform = `translateX(${o * p * 64}%) translateY(${p * 5}%) rotate(${o * p * 9}deg) scale(${1 - p * 0.06})`;
+        });
+      });
+      strips.forEach(s => {
+        const t = s.firstElementChild; const max = t.scrollWidth - s.clientWidth;
+        if (max <= 0) { t.style.transform = 'none'; return; }
+        const r = s.getBoundingClientRect();
+        const p = motion ? clamp((vh - r.top) / (vh + r.height), 0, 1) : 0;
+        t.style.transform = `translateX(${-p * max}px)`;
+      });
+      if (tl && prog) {
+        const r = tl.getBoundingClientRect();
+        prog.style.transform = `scaleY(${clamp((vh * 0.6 - r.top) / r.height, 0, 1)})`;
+        dots.forEach(d => { const lit = d.getBoundingClientRect().top < vh * 0.6; d.style.background = lit ? 'var(--accent)' : '#0a0a0a'; d.style.borderColor = lit ? 'var(--accent)' : '#444'; });
+      }
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(tick); };
+    on(window, 'scroll', onScroll, { passive: true }); on(window, 'resize', onScroll); tick();
+    if (!motion) strips.forEach(s => { s.style.overflowX = 'auto'; });
+
+    q('[data-magnetic]').forEach(el => {
+      if (!motion) return;
+      el.style.transition = 'translate .5s cubic-bezier(.16,1,.3,1), background .3s, color .3s, border-color .3s';
+      on(el, 'mousemove', e => { const r = el.getBoundingClientRect(); el.style.translate = `${(e.clientX - r.left - r.width / 2) * .25}px ${(e.clientY - r.top - r.height / 2) * .35}px`; });
+      on(el, 'mouseleave', () => { el.style.translate = '0 0'; });
+    });
+
+    const cur = document.querySelector('[data-cursor]');
+    if (cur && matchMedia('(hover: hover)').matches) on(window, 'mousemove', e => {
+      cur.style.translate = `${e.clientX}px ${e.clientY}px`;
+      const v = e.target.closest && e.target.closest('[data-view]');
+      cur.style.scale = v ? '1' : '0';
+      if (v) cur.textContent = v.dataset.view;
+    });
+
+    this.field(motion);
+
+    const clk = document.querySelector('[data-clock]');
+    if (clk) { const upd = () => clk.textContent = 'Ovar, PT · ' + new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Lisbon', hour: '2-digit', minute: '2-digit' }); upd(); const id = setInterval(upd, 30000); this.cleanups.push(() => clearInterval(id)); }
+  }
+  countUp(el) {
+    const target = +el.dataset.count, t0 = performance.now();
+    const step = now => { const p = Math.min(1, (now - t0) / 1600); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(step); };
+    el.textContent = '0'; requestAnimationFrame(step);
+  }
+  field(motion) {
+    const cv = document.querySelector('[data-field]'); if (!cv) return;
+    const hero = document.querySelector('[data-hero]');
+    const ctx = cv.getContext('2d'); const dpr = Math.min(2, devicePixelRatio || 1);
+    let W = 0, H = 0, mx = 0, my = 0, sx = 0, sy = 0, act = 0, inside = false, visible = true, raf;
+    const ripples = [];
+    const size = () => { const r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    size();
+    const local = (x, y) => { const r = cv.getBoundingClientRect(); return [x - r.left, y - r.top]; };
+    const move = (x, y) => { [mx, my] = local(x, y); inside = my >= 0 && my <= H; if (act < 0.01) { sx = mx; sy = my; } };
+    const onMove = e => move(e.clientX, e.clientY);
+    const onTouch = e => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); };
+    const onDown = e => { const [x, y] = local(e.clientX, e.clientY); if (y >= 0 && y <= H && motion) { ripples.push({ x, y, t0: performance.now() }); if (ripples.length > 4) ripples.shift(); } };
+    const onLeave = () => { inside = false; };
+    window.addEventListener('mousemove', onMove); window.addEventListener('touchmove', onTouch, { passive: true });
+    window.addEventListener('pointerdown', onDown); document.addEventListener('mouseleave', onLeave); window.addEventListener('resize', size);
+    const vio = new IntersectionObserver(([e]) => { visible = e.isIntersecting; }); vio.observe(hero);
+    const G = 26, R = 190, TAU = Math.PI * 2;
+    const draw = t => {
+      raf = requestAnimationFrame(draw);
+      if (!visible) return;
+      sx += (mx - sx) * 0.1; sy += (my - sy) * 0.1;
+      act += ((inside ? 1 : 0) - act) * 0.06;
+      const tt = motion ? t : 0;
+      for (let i = ripples.length - 1; i >= 0; i--) if (t - ripples[i].t0 > 1800) ripples.splice(i, 1);
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = '#ededed';
+      for (let y = G / 2; y < H; y += G) {
+        const fade = 1 - Math.max(0, (y / H - 0.5) / 0.5) * 0.8;
+        for (let x = G / 2; x < W; x += G) {
+          let a = 0.06 + 0.05 * (Math.sin(x * 0.008 + y * 0.005 - tt * 0.0007) + 1) / 2;
+          let px = x, py = y, rad = 0.9;
+          const dx = x - sx, dy = y - sy, d = Math.hypot(dx, dy) || 1;
+          let k = Math.max(0, 1 - d / R); k = k * k * (3 - 2 * k) * act;
+          if (k > 0) { const push = k * 16; px += dx / d * push; py += dy / d * push; rad += k * 1.4; a += k * 0.6; }
+          for (const rp of ripples) {
+            const age = t - rp.t0, ring = age * 0.55, rx = x - rp.x, ry = y - rp.y, rd = Math.hypot(rx, ry) || 1;
+            const band = Math.max(0, 1 - Math.abs(rd - ring) / 50) * (1 - age / 1800);
+            if (band > 0) { px += rx / rd * band * 8; py += ry / rd * band * 8; rad += band * 1.1; a += band * 0.5; }
+          }
+          ctx.globalAlpha = Math.min(1, a) * fade;
+          ctx.beginPath(); ctx.arc(px, py, rad, 0, TAU); ctx.fill();
+        }
+      }
+      ctx.globalAlpha = 1;
+    };
+    raf = requestAnimationFrame(draw);
+    this.cleanups.push(() => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); window.removeEventListener('touchmove', onTouch); window.removeEventListener('pointerdown', onDown); document.removeEventListener('mouseleave', onLeave); window.removeEventListener('resize', size); vio.disconnect(); });
+  }
+  renderVals() {
+    const tools = ['Rust', 'Flutter', 'Swift', 'React', 'Node.js', 'PHP', 'Kubernetes', 'NATS', 'PostgreSQL', 'gRPC', 'Core ML', 'Docker'];
+    return {
+      year: new Date().getFullYear(),
+      marquee: [...tools, ...tools],
+      scalaShots: [1, 2, 3, 4, 5, 6].map(i => `assets/img/apps/scala-${i}.webp`),
+      glance: [
+        { k: 'MOST RECENT', v: 'Full Stack Engineer at XCOPE AI' },
+        { k: 'EXPERIENCE', v: '9 years, 3 product companies + own startups' },
+        { k: 'CORE STACK', v: 'Rust, Flutter, Swift, React, Node.js, PHP' },
+        { k: 'LOCATION', v: 'Portugal · remote or hybrid' },
+      ],
+      facts: [
+        { n: 200, suffix: 'K+', label: 'Downloads on ', link: 'StoryStalkers', href: 'https://github.com/bakill3/StoryStalkers' },
+        { n: 100, suffix: 'K+', label: 'Reddit views on side projects' },
+        { n: 2017, suffix: '', label: 'First professional project shipped' },
+        { n: 2, suffix: '', label: 'Apps live on the App Store' },
+      ],
+      projects: [
+        { n: '01', name: 'ChatMind', desc: 'Local-first AI dashboard that learns your writing style from chat logs and replies like you. LLaMA, fully offline.', tag: 'AI · PHP', href: 'https://github.com/bakill3/chatmind', cta: 'Repo ↗' },
+        { n: '02', name: 'Maze of Me', desc: 'Psychological game built from your own Spotify and Google data, with AI NPCs. Praised by Meta for Developers.', tag: 'Game · Python', href: 'https://github.com/bakill3/maze-of-me', cta: 'Repo ↗' },
+        { n: '03', name: 'Cavemen', desc: 'Browser extension that makes ChatGPT, Claude and Gemini answer shorter.', tag: 'Chrome Extension', href: 'https://github.com/bakill3/cavemen-web', cta: 'Repo ↗' },
+        { n: '04', name: 'Anchorly', desc: 'Chrome extension to highlight, organize and jump back to text on any page.', tag: 'Chrome Extension', href: 'https://chromewebstore.google.com/detail/anchorly/gkidejbpflnmjbdkpmpfehchlamchhej', cta: 'Install ↗' },
+        { n: '05', name: 'Tap&Go', desc: 'NFC review system with analytics dashboards, Instagram discounts and a cocktail recommender.', tag: 'Startup', href: 'https://tapgotech.com/', cta: 'Visit ↗' },
+        { n: '06', name: 'AMS', desc: 'Secure messaging using atmospheric noise for true-random encryption keys. PHP, Redis, Docker.', tag: 'Security', href: 'https://github.com/bakill3/AMS', cta: 'Repo ↗' },
+        { n: '07', name: 'StoryStalkers', desc: 'Instagram story viewer web + Android app. 200K+ Play Store downloads before API shutdown.', tag: '2018–2020', href: 'https://github.com/bakill3/StoryStalkers', cta: 'Repo ↗' },
+      ],
+      jobs: [
+        { dates: 'Dec 2025 – Jun 2026', place: 'Porto, hybrid', company: 'XCOPE AI', stack: 'Rust · Flutter · NATS · SSE', href: 'https://www.xcope.ai/', role: 'Full Stack Engineer', summary: 'Backend and mobile apps in Rust and Flutter. QR/GPS clock-ins, real-time updates over NATS/SSE, and modules for planning, monitoring, fleet and reporting.' },
+        { dates: 'Oct 2024 – Oct 2025', place: 'Remote', company: 'Atlistis', stack: 'React · Node.js · Sharetribe · Kotlin · Swift · Stripe', href: 'https://www.atlistis.com/', role: 'Full Stack Developer', summary: 'Marketplace features in React, Node and Sharetribe. Native Kotlin and Swift apps with push, Stripe webhooks with VAT invoicing, booking logic refactor and live hotel sync via HyperGuest.' },
+        { dates: 'Nov 2023 – Jun 2024', place: 'Remote', company: 'Learnship Networks', stack: 'PHP · Node.js · CQRS · gRPC · RabbitMQ · Kubernetes', href: 'https://learnship.com/', role: 'Junior Software Engineer (PHP)', summary: 'Event-driven backends with Mezzio, Node and Ecotone CQRS over EventBridge, gRPC and RabbitMQ. Deployed on AKS with Helm and GitHub Actions; Karate tests and Datadog monitoring.' },
+        { dates: 'Jun – Nov 2023', place: 'On-site', company: 'Tap&Go', stack: 'PHP · JavaScript · NFC · Analytics', href: 'https://tapgotech.com/', role: 'Founder & Developer', summary: 'NFC-based review system with analytics dashboards, Instagram discounts and a cocktail recommendation engine.' },
+        { dates: 'May – Nov 2023', place: 'Remote', company: 'AlaskaRecover', stack: 'Shopify · SEO · Partnerships', href: 'https://alaskarecover.com/', role: 'Lead Developer', summary: 'Led tech for Portugal’s top ice bath provider and secured Amazon and Decathlon partnerships.' },
+        { dates: '2020 – 2022', place: 'Remote', company: 'Freelance', stack: 'Shopify · WordPress · Python · AI', href: 'https://www.upwork.com/', role: 'Upwork · Fiverr · Freelancer', summary: 'Full-stack builds, SEO, Shopify and WordPress, facial recognition and speech AI, while studying.' },
+        { dates: '2018 – 2020', place: 'Remote', company: 'StoryStalkers', stack: 'PHP · Java · Android · Firebase', href: 'https://github.com/bakill3/StoryStalkers', role: 'Founder & Developer', summary: 'Instagram story viewer with 200K+ downloads, a custom API and extended analytics.' },
+      ],
+      stack: [
+        { group: 'Languages', items: 'JavaScript, PHP, Rust, Dart, Swift, Python, SQL, C/C++, C#, Java' },
+        { group: 'Frameworks', items: 'Flutter, React, Node.js, SwiftUI, Symfony, Mezzio' },
+        { group: 'Architecture & Data', items: 'EDA, CQRS, gRPC, RabbitMQ, NATS, PostgreSQL, MySQL, MongoDB, Redis, EventStoreDB' },
+        { group: 'Cloud & DevOps', items: 'Docker, Kubernetes, Helm, Terraform, Azure, AWS, GitHub Actions, Codemagic, Datadog' },
+      ],
+    };
+  }
+}
+</script>
 </body>
 </html>
