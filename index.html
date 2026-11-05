@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>Gabriel Brandão - Software Engineer</title>
-<meta name="description" content="Gabriel Brandão, software engineer in Portugal. Full-stack, mobile and backend: Rust, Flutter, Swift, React, Node.js and PHP. Builder of Shoto and Scala on the App Store.">
+<meta name="description" content="Gabriel Brandão, software engineer in Portugal. Full-stack, mobile and backend: Rust, Flutter, Swift, React, Node.js and PHP. Builder of Shoto, Scala and Bloqiva on the App Store.">
+<link rel="canonical" href="https://bakill3.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Gabriel Brandão">
 <meta property="og:url" content="https://bakill3.github.io/">
 <meta property="og:title" content="Gabriel Brandão — Software Engineer">
-<meta property="og:description" content="Full-stack, mobile and backend engineer building products end to end. Rust, Flutter, Swift, React, Node.js, PHP.">
+<meta property="og:description" content="Full-stack, mobile and backend engineer building products end to end. Three iOS apps shipped solo: Shoto, Scala and Bloqiva.">
 <meta property="og:image" content="https://bakill3.github.io/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gabriel Brandão — Software Engineer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gabriel Brandão — Software Engineer">
-<meta name="twitter:description" content="Full-stack, mobile and backend engineer building products end to end.">
+<meta name="twitter:description" content="Full-stack, mobile and backend engineer building products end to end. Three iOS apps shipped solo: Shoto, Scala and Bloqiva.">
 <meta name="twitter:image" content="https://bakill3.github.io/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="Gabriel Brandão — Software Engineer">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/img/avatar.jpg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <style>
   html { scroll-behavior:smooth; }
   body { margin:0; background:#0a0a0a; color:#ededed; font-family:'Geist',sans-serif; -webkit-font-smoothing:antialiased; --accent:#ff5a1f; overflow-x:hidden; }
@@ -33,16 +33,30 @@
   a:hover { color:var(--accent); }
   ::selection { background:var(--accent); color:#0a0a0a; }
   [data-strip]::-webkit-scrollbar { display:none; }
+  /* Hero words fade in with JS; without JS they stay visible. */
+  .js [data-word] { opacity:0; }
+  /* Hover states (inline styles need !important to be overridden) */
+  .hv-nav:hover { color:#ededed !important; background:#1c1c1c !important; }
+  .hv-fill-accent:hover { background:var(--accent) !important; color:#0a0a0a !important; }
+  .hv-fill-light:hover { background:#ededed !important; color:#0a0a0a !important; }
+  .hv-outline:hover { border-color:#ededed !important; color:#ededed !important; }
+  .hv-outline-accent:hover { border-color:var(--accent) !important; color:var(--accent) !important; }
+  .hv-card:hover { border-color:#3a3a3a !important; }
+  .hv-accent:hover { color:var(--accent) !important; }
+  .hv-underline:hover { color:var(--accent) !important; border-bottom:1px solid var(--accent) !important; }
+  .hv-row:hover { padding-left:24px !important; color:var(--accent) !important; }
+  .hv-lift:hover { translate:0 -10px !important; }
 </style>
-</helmet>
+</head>
+<body>
 
 <div data-cursor="" style="position:fixed;left:0;top:0;z-index:60;pointer-events:none;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:grid;place-items:center;font-family:'Geist Mono',monospace;font-size:12px;font-weight:500;scale:0;transition:scale .35s cubic-bezier(.16,1,.3,1)">View ↗</div>
 
 <nav style="position:fixed;top:16px;left:50%;translate:-50% 0;z-index:50;display:flex;align-items:center;gap:2px;padding:5px;border:1px solid #262626;border-radius:999px;background:rgba(12,12,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;white-space:nowrap;max-width:calc(100vw - 24px);box-sizing:border-box">
-  <a href="#apps" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Work</a>
-  <a href="#experience" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Experience</a>
-  <a href="#contact" style="padding:8px 12px;border-radius:999px;color:#a1a1a1" style-hover="color:#ededed;background:#1c1c1c">Contact</a>
-  <a href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="padding:8px 14px;border-radius:999px;background:#ededed;color:#0a0a0a;font-weight:500" style-hover="background:var(--accent);color:#0a0a0a">CV ↓</a>
+  <a href="#apps" class="hv-nav" style="padding:8px 12px;border-radius:999px;color:#a1a1a1">Work</a>
+  <a href="#experience" class="hv-nav" style="padding:8px 12px;border-radius:999px;color:#a1a1a1">Experience</a>
+  <a href="#contact" class="hv-nav" style="padding:8px 12px;border-radius:999px;color:#a1a1a1">Contact</a>
+  <a href="assets/docs/Gabriel-Brandao-Resume.pdf" target="_blank" rel="noopener" class="hv-fill-accent" style="padding:8px 14px;border-radius:999px;background:#ededed;color:#0a0a0a;font-weight:500">CV ↓</a>
 </nav>
 
 <!-- HERO -->
@@ -57,16 +71,16 @@
       </div>
     </div>
     <h1 style="font-family:'Geist',sans-serif;font-weight:500;font-size:clamp(40px,7.4vw,116px);line-height:1;letter-spacing:-0.05em;margin:0;max-width:15ch;text-wrap:balance">
-      <span data-word="" style="display:inline-block;opacity:0">Gabriel</span> <span data-word="" style="display:inline-block;opacity:0">Brandão.</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">Software</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">engineer</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">building</span> <span data-word="" style="display:inline-block;opacity:0;color:#737373">products</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">end</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">to</span> <span data-word="" style="display:inline-block;opacity:0;color:var(--accent)">end.</span>
+      <span data-word="" style="display:inline-block">Gabriel</span> <span data-word="" style="display:inline-block">Brandão.</span> <span data-word="" style="display:inline-block;color:#737373">Software</span> <span data-word="" style="display:inline-block;color:#737373">engineer</span> <span data-word="" style="display:inline-block;color:#737373">building</span> <span data-word="" style="display:inline-block;color:#737373">products</span> <span data-word="" style="display:inline-block;color:var(--accent)">end</span> <span data-word="" style="display:inline-block;color:var(--accent)">to</span> <span data-word="" style="display:inline-block;color:var(--accent)">end.</span>
     </h1>
   </div>
   <div data-intro="" style="position:relative;max-width:1240px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
     <div style="display:flex;flex-direction:column;gap:24px;max-width:520px">
       <p style="margin:0;font-size:clamp(16px,1.4vw,18px);line-height:1.6;color:#a1a1a1;text-wrap:pretty">Shipping software since 2017: web platforms, event-driven backends and mobile apps across Rust, Flutter, Swift, React, Node and PHP, for startups, scale-ups and my own products with 200K+ downloads.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="padding:14px 22px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="background:#ededed;color:#0a0a0a">Download CV ↓</a>
-        <a data-magnetic="" href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px" style-hover="border-color:#ededed;color:#ededed">LinkedIn ↗</a>
-        <a data-magnetic="" href="mailto:deostulti2@gmail.com" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px" style-hover="border-color:#ededed;color:#ededed">Email me</a>
+        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume.pdf" target="_blank" rel="noopener" class="hv-fill-light" style="padding:14px 22px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px">Download CV ↓</a>
+        <a data-magnetic="" href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener" class="hv-outline" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px">LinkedIn ↗</a>
+        <a data-magnetic="" href="mailto:deostulti2@gmail.com" class="hv-outline" style="padding:14px 22px;border-radius:999px;border:1px solid #333;font-size:15px">Email me</a>
       </div>
     </div>
     <a href="#apps" style="display:flex;align-items:center;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em">
@@ -76,12 +90,33 @@
   </div>
 </section>
 
-<!-- MARQUEE -->
+<!-- MARQUEE (list is repeated twice so the loop is seamless) -->
 <div style="border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;overflow:hidden;padding:20px 0;background:#0d0d0d">
   <div data-marquee="" style="display:flex;width:max-content">
-    <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="12">
-      <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">{{ m }}<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
-    </sc-for>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Rust<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Flutter<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Swift<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">React<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Node.js<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">PHP<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Kubernetes<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">NATS<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">PostgreSQL<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">gRPC<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Core ML<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Docker<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Rust<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Flutter<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Swift<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">React<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Node.js<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">PHP<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Kubernetes<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">NATS<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">PostgreSQL<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">gRPC<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Core ML<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
+    <span aria-hidden="true" style="display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-0.03em;white-space:nowrap;color:#5c5c5c">Docker<span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">✦</span></span>
   </div>
 </div>
 
@@ -90,9 +125,9 @@
   <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,72px)">
     <div>
       <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 18px">01 — ON THE APP STORE</p>
-      <h2 style="font-weight:500;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-0.05em;margin:0">Two new apps, <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">shipped solo.</span></h2>
+      <h2 style="font-weight:500;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-0.05em;margin:0">Three apps, <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">shipped solo.</span></h2>
     </div>
-    <p style="max-width:36ch;color:#a1a1a1;font-size:16px;line-height:1.6;margin:0">Designed, built and launched end to end. Both run their intelligence on-device, so personal data stays on the phone.</p>
+    <p style="max-width:36ch;color:#a1a1a1;font-size:16px;line-height:1.6;margin:0">Designed, built and launched end to end. Shoto and Scala run their intelligence on-device, so personal data stays on the phone. Bloqiva plays fully offline.</p>
   </div>
 
   <div style="display:flex;flex-direction:column;gap:24px">
@@ -111,8 +146,8 @@
           <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">14 languages</span>
         </div>
         <div style="margin-top:auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:8px">
-          <a data-magnetic="" href="https://apps.apple.com/us/app/shoto-ai-photo-picker/id6808456093" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="color:#0a0a0a;background:#ededed">View on the App Store ↗</a>
-          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Swift · Vision · Core ML</span>
+          <a data-magnetic="" href="https://apps.apple.com/us/app/shoto-ai-photo-picker/id6808456093" target="_blank" rel="noopener" class="hv-fill-light" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px">View on the App Store ↗</a>
+          <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Flutter · Vision · Core ML</span>
         </div>
       </div>
       <div data-fan="" style="position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(48px,6vw,80px) 0;background:#151515;overflow:hidden">
@@ -142,16 +177,58 @@
             <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">Apple Health sync</span>
           </div>
           <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-            <a data-magnetic="" href="https://apps.apple.com/us/app/scala-daily-health-score/id6790861004" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px" style-hover="color:#0a0a0a;background:#ededed">View on the App Store ↗</a>
-            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Swift · HealthKit · SwiftUI</span>
+            <a data-magnetic="" href="https://apps.apple.com/us/app/scala-daily-health-score/id6790861004" target="_blank" rel="noopener" class="hv-fill-light" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px">View on the App Store ↗</a>
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Flutter · Dart · HealthKit</span>
           </div>
         </div>
       </div>
       <div data-strip="" style="overflow:hidden;padding:8px 0 clamp(28px,4vw,56px);background:#101010">
         <div data-strip-track="" style="display:flex;gap:16px;width:max-content;padding:0 clamp(28px,4vw,56px)">
-          <sc-for list="{{ scalaShots }}" as="s" hint-placeholder-count="6">
-            <img src="{{ s }}" alt="Scala screenshot" loading="lazy" decoding="async" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)" style-hover="translate:0 -10px">
-          </sc-for>
+          <img src="assets/img/apps/scala-1.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/scala-2.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/scala-3.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/scala-4.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/scala-5.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/scala-6.webp" alt="Scala screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+        </div>
+      </div>
+    </article>
+
+    <!-- BLOQIVA -->
+    <article data-reveal="" style="border:1px solid #1f1f1f;border-radius:28px;overflow:hidden;background:#101010">
+      <div style="padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(24px,4vw,56px)">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;justify-content:space-between;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;color:#737373"><span>A/03 · iOS + iPad</span><span>Games / Puzzle</span></div>
+          <div>
+            <h3 style="font-weight:500;font-size:clamp(48px,5.6vw,80px);letter-spacing:-0.055em;line-height:.95;margin:0">Bloqiva</h3>
+            <p style="font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(22px,2.2vw,28px);margin:10px 0 0;color:#ededed">Block puzzles, minus the ads.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px;justify-content:flex-end">
+          <p style="color:#a1a1a1;font-size:16px;line-height:1.65;margin:0;max-width:50ch;text-wrap:pretty">An offline block puzzle with six modes and 100 handcrafted levels. Every set of pieces is checked before it's dealt, so whenever a fitting set exists, you get one. No ads, no purchases, no data collected.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">No ads, ever</span>
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">100 levels</span>
+            <span style="padding:7px 13px;border:1px solid #2a2a2a;border-radius:999px;font-size:13px;color:#d4d4d4">15 languages</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <a data-magnetic="" href="https://apps.apple.com/us/app/bloqiva-block-puzzle-game/id6823785390" target="_blank" rel="noopener" class="hv-fill-light" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--accent);color:#0a0a0a;font-weight:500;font-size:15px">View on the App Store ↗</a>
+            <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373">Flutter · Flame</span>
+          </div>
+        </div>
+      </div>
+      <div data-strip="" style="overflow:hidden;padding:8px 0 clamp(28px,4vw,56px);background:#101010">
+        <div data-strip-track="" style="display:flex;gap:16px;width:max-content;padding:0 clamp(28px,4vw,56px)">
+          <img src="assets/img/apps/bloqiva-1.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-2.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-3.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-4.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-5.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-6.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-7.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-8.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-9.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
+          <img src="assets/img/apps/bloqiva-10.webp" alt="Bloqiva screenshot" loading="lazy" decoding="async" class="hv-lift" style="width:clamp(150px,20vw,260px);aspect-ratio:1242/2688;object-fit:cover;border-radius:clamp(12px,1.4vw,20px);display:block;transition:translate .5s cubic-bezier(.16,1,.3,1)">
         </div>
       </div>
     </article>
@@ -161,12 +238,22 @@
 <!-- NUMBERS -->
 <section data-screen-label="Numbers" style="padding:64px clamp(20px,5vw,72px);max-width:1384px;margin:0 auto">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(20px,3vw,40px)">
-    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
-      <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
-        <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="{{ f.n }}">{{ f.n }}</span>{{ f.suffix }}</div>
-        <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">{{ f.label }}<sc-if value="{{ f.href }}" hint-placeholder-val="{{ false }}"><a href="{{ f.href }}" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">{{ f.link }}</a></sc-if></p>
-      </div>
-    </sc-for>
+    <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
+      <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="200">200</span>K+</div>
+      <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">Downloads on <a href="https://github.com/bakill3/StoryStalkers" target="_blank" rel="noopener" class="hv-underline" style="color:#ededed;border-bottom:1px solid #444">StoryStalkers</a></p>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
+      <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="100">100</span>K+</div>
+      <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">Reddit views on side projects</p>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
+      <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="2017">2017</span></div>
+      <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">First professional project shipped</p>
+    </div>
+    <div data-reveal="" style="border-top:1px solid #262626;padding-top:20px;min-width:0">
+      <div style="font-weight:500;font-size:clamp(36px,4.6vw,64px);letter-spacing:-0.05em;line-height:1;white-space:nowrap"><span data-count="3">3</span></div>
+      <p style="color:#a1a1a1;font-size:14px;line-height:1.45;margin:12px 0 0">Apps live on the App Store</p>
+    </div>
   </div>
 </section>
 
@@ -177,14 +264,48 @@
     <h2 style="font-weight:500;font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-0.05em;margin:0">Side projects <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">&amp; experiments.</span></h2>
   </div>
   <div style="border-top:1px solid #1f1f1f">
-    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="7">
-      <a data-reveal="" data-view="{{ p.cta }}" href="{{ p.href }}" target="_blank" rel="noopener" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s" style-hover="padding-left:24px;color:var(--accent)">
-        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">{{ p.n }}</span>
-        <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">{{ p.name }}</span>
-        <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">{{ p.desc }}</span>
-        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">{{ p.tag }}</span>
-      </a>
-    </sc-for>
+    <a data-reveal="" data-view="Repo ↗" href="https://github.com/bakill3/chatmind" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">01</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">ChatMind</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Local-first AI dashboard that learns your writing style from chat logs and replies like you. LLaMA, fully offline.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">AI · PHP</span>
+    </a>
+    <a data-reveal="" data-view="Repo ↗" href="https://github.com/bakill3/maze-of-me" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">02</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">Maze of Me</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Psychological game built from your own Spotify and Google data, with AI NPCs. Praised by Meta for Developers.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">Game · Python</span>
+    </a>
+    <a data-reveal="" data-view="Repo ↗" href="https://github.com/bakill3/cavemen-web" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">03</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">Cavemen</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Browser extension that makes ChatGPT, Claude and Gemini answer shorter.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">Chrome Extension</span>
+    </a>
+    <a data-reveal="" data-view="Install ↗" href="https://chromewebstore.google.com/detail/anchorly/gkidejbpflnmjbdkpmpfehchlamchhej" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">04</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">Anchorly</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Chrome extension to highlight, organize and jump back to text on any page.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">Chrome Extension</span>
+    </a>
+    <a data-reveal="" data-view="Visit ↗" href="https://tapgotech.com/" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">05</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">Tap&amp;Go</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">NFC review system with analytics dashboards, Instagram discounts and a cocktail recommender.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">Startup</span>
+    </a>
+    <a data-reveal="" data-view="Repo ↗" href="https://github.com/bakill3/AMS" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">06</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">AMS</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Secure messaging using atmospheric noise for true-random encryption keys. PHP, Redis, Docker.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">Security</span>
+    </a>
+    <a data-reveal="" data-view="Repo ↗" href="https://github.com/bakill3/StoryStalkers" target="_blank" rel="noopener" class="hv-row" style="display:flex;flex-wrap:wrap;align-items:baseline;column-gap:24px;row-gap:8px;padding:28px 4px;border-bottom:1px solid #1f1f1f;transition:padding .5s cubic-bezier(.16,1,.3,1), color .3s">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;width:28px">07</span>
+      <span style="flex:1 1 220px;font-weight:500;font-size:clamp(26px,3vw,40px);letter-spacing:-0.04em;line-height:1.05">StoryStalkers</span>
+      <span style="flex:2 1 300px;color:#a1a1a1;font-size:15px;line-height:1.55">Instagram story viewer web + Android app. 200K+ Play Store downloads before API shutdown.</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;white-space:nowrap">2018–2020</span>
+    </a>
   </div>
 </section>
 
@@ -196,27 +317,90 @@
         <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 18px">03 — EXPERIENCE</p>
         <h2 style="font-weight:500;font-size:clamp(40px,5.6vw,84px);line-height:.98;letter-spacing:-0.05em;margin:0">Where I've <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.02em;color:#a1a1a1">built things.</span></h2>
         <p style="color:#a1a1a1;font-size:16px;line-height:1.6;max-width:38ch;margin:24px 0 0">Startups, scale-ups and my own products. Studying Computer Science &amp; Engineering at ISEC, Coimbra.</p>
-        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume-final.pdf" target="_blank" rel="noopener" style="display:inline-flex;margin-top:28px;padding:13px 20px;border:1px solid #333;border-radius:999px;font-size:14px" style-hover="border-color:var(--accent);color:var(--accent)">Download CV ↓</a>
+        <a data-magnetic="" href="assets/docs/Gabriel-Brandao-Resume.pdf" target="_blank" rel="noopener" class="hv-outline-accent" style="display:inline-flex;margin-top:28px;padding:13px 20px;border:1px solid #333;border-radius:999px;font-size:14px">Download CV ↓</a>
       </div>
     </div>
     <div data-timeline="" style="position:relative;padding-left:32px">
       <span style="position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:#222;display:block"></span>
       <span data-progress="" style="position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--accent);transform-origin:top;transform:scaleY(0);display:block"></span>
-      <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="9">
-        <div data-reveal="" style="position:relative;padding:0 0 44px">
-          <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
-          <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">{{ j.dates }} · {{ j.place }}</p>
-          <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="{{ j.href }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:baseline;gap:8px" style-hover="color:var(--accent)">{{ j.company }}<span style="font-size:15px;color:#737373">↗</span></a></h3>
-          <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">{{ j.role }}</p>
-          <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">{{ j.summary }}</p>
-          <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">{{ j.stack }}</p>
-        </div>
-      </sc-for>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">Apr 2026 – Present · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="#apps" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Independent<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Product Engineer (App Store)</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Designed, built and shipped three iOS apps solo: Shoto, Scala and Bloqiva. Owned product, design, development and App Store release.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">Flutter · Dart · Flame · Core ML · HealthKit</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">Dec 2025 – Jun 2026 · Porto, hybrid</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://www.xcope.ai/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">XCOPE AI<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Full Stack Engineer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Backend and mobile apps in Rust and Flutter. QR/GPS clock-ins, real-time updates over NATS/SSE, and modules for planning, monitoring, fleet and reporting.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">Rust · Flutter · NATS · SSE</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">Oct 2024 – Oct 2025 · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://www.atlistis.com/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Atlistis<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Full Stack Developer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Marketplace features in React, Node and Sharetribe. Native Kotlin and Swift apps with push, Stripe webhooks with VAT invoicing, booking logic refactor and live hotel sync via HyperGuest.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">React · Node.js · Sharetribe · Kotlin · Swift · Stripe</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">Nov 2023 – Jun 2024 · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://learnship.com/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Learnship Networks<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Junior Software Engineer (PHP)</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Event-driven backends with Mezzio, Node and Ecotone CQRS over EventBridge, gRPC and RabbitMQ. Deployed on AKS with Helm and GitHub Actions; Karate tests and Datadog monitoring.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">PHP · Node.js · CQRS · gRPC · RabbitMQ · Kubernetes</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">Jun – Nov 2023 · On-site</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://tapgotech.com/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Tap&amp;Go<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Founder &amp; Developer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">NFC-based review system with analytics dashboards, Instagram discounts and a cocktail recommendation engine.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">PHP · JavaScript · NFC · Analytics</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">May – Nov 2023 · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://alaskarecover.com/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Alaska Recover<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Lead Developer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Built and maintained the brand’s WordPress e-commerce site, supported its expansion onto Amazon and Decathlon, and coordinated external developers.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">WordPress · E-commerce · SEO</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">2020 – 2023 · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://www.upwork.com/" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">Freelance<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Upwork · Fiverr · Freelancer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Full-stack builds, SEO, Shopify and WordPress, facial recognition and speech AI, while studying.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">Shopify · WordPress · Python · AI</p>
+      </div>
+
+      <div data-reveal="" style="position:relative;padding:0 0 44px">
+        <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
+        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">2018 – 2020 · Remote</p>
+        <h3 style="font-weight:500;font-size:24px;letter-spacing:-0.03em;margin:0"><a href="https://github.com/bakill3/StoryStalkers" target="_blank" rel="noopener" class="hv-accent" style="display:inline-flex;align-items:baseline;gap:8px">StoryStalkers<span style="font-size:15px;color:#737373">↗</span></a></h3>
+        <p style="margin:4px 0 0;font-size:15px;color:#d4d4d4">Founder &amp; Developer</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch">Instagram story viewer with 200K+ downloads, a custom API and extended analytics.</p>
+        <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.6;color:#8a8a8a">PHP · Java · Android · Firebase</p>
+      </div>
+
       <div data-reveal="" style="position:relative">
         <span data-tl-dot="" style="position:absolute;left:-32px;top:6px;width:11px;height:11px;border-radius:50%;background:#0a0a0a;border:1px solid #444;box-sizing:border-box;display:block;transition:background .4s,border-color .4s"></span>
         <p style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;margin:0 0 10px">2017 – 2018 · Algarve</p>
         <h3 style="font-weight:500;font-size:20px;letter-spacing:-0.03em;margin:0;color:#d4d4d4">Earlier: Full Stack internships</h3>
-        <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch"><a href="https://webmax.pt/" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">WebMax</a> (custom CMS and four client sites, rated 19.4/20) and <a href="https://www.facebook.com/publimapapublicidade/" target="_blank" rel="noopener" style="color:#ededed;border-bottom:1px solid #444" style-hover="color:var(--accent);border-bottom:1px solid var(--accent)">Publimapa</a> (corporate site and dropshipping platform, rated 19.2/20).</p>
+        <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#a1a1a1;max-width:54ch"><a href="https://webmax.pt/" target="_blank" rel="noopener" class="hv-underline" style="color:#ededed;border-bottom:1px solid #444">WebMax</a> (custom CMS and four client sites, rated 19.4/20) and <a href="https://www.facebook.com/publimapapublicidade/" target="_blank" rel="noopener" class="hv-underline" style="color:#ededed;border-bottom:1px solid #444">Publimapa</a> (corporate site and dropshipping platform, rated 19.2/20).</p>
       </div>
     </div>
   </div>
@@ -243,12 +427,22 @@
 <section id="skills" data-screen-label="Skills" style="padding:40px clamp(20px,5vw,72px) clamp(80px,10vw,140px);max-width:1384px;margin:0 auto">
   <p data-reveal="" style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 24px">05 — SKILLS</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
-    <sc-for list="{{ stack }}" as="s" hint-placeholder-count="4">
-      <div data-reveal="" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s" style-hover="border-color:#3a3a3a">
-        <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">{{ s.group }}</p>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">{{ s.items }}</p>
-      </div>
-    </sc-for>
+    <div data-reveal="" class="hv-card" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">Languages</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">JavaScript, PHP, Rust, Dart, Swift, Python, SQL, C/C++, C#, Java</p>
+    </div>
+    <div data-reveal="" class="hv-card" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">Frameworks</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">Flutter, Flame, React, Node.js, SwiftUI, Symfony, Mezzio</p>
+    </div>
+    <div data-reveal="" class="hv-card" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">Architecture &amp; Data</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">EDA, CQRS, gRPC, RabbitMQ, NATS, PostgreSQL, MySQL, MongoDB, Redis, EventStoreDB</p>
+    </div>
+    <div data-reveal="" class="hv-card" style="border:1px solid #1f1f1f;border-radius:20px;padding:24px;background:#0f0f0f;transition:border-color .3s">
+      <p style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);margin:0 0 14px">Cloud &amp; DevOps</p>
+      <p style="margin:0;font-size:15px;line-height:1.7;color:#d4d4d4">Docker, Kubernetes, Helm, Terraform, Azure, AWS, GitHub Actions, Codemagic, Datadog</p>
+    </div>
   </div>
 </section>
 
@@ -258,125 +452,120 @@
     <p data-reveal="" style="font-family:'Geist Mono',monospace;font-size:12px;color:#737373;letter-spacing:0.06em;margin:0 0 24px">06 — CONTACT</p>
     <h2 data-reveal="" style="font-weight:500;font-size:clamp(48px,10vw,160px);line-height:.95;letter-spacing:-0.06em;margin:0">Let's build <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.025em;color:var(--accent)">something.</span></h2>
     <div data-reveal="" style="display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;margin-top:56px">
-      <a data-magnetic="" href="mailto:deostulti2@gmail.com" style="display:inline-flex;align-items:center;gap:14px;padding:clamp(16px,2vw,22px) clamp(22px,3vw,34px);border-radius:999px;background:#ededed;color:#0a0a0a;font-size:clamp(16px,2vw,22px);font-weight:500;max-width:100%;box-sizing:border-box" style-hover="background:var(--accent);color:#0a0a0a">Email me <span>→</span></a>
+      <a data-magnetic="" href="mailto:deostulti2@gmail.com" class="hv-fill-accent" style="display:inline-flex;align-items:center;gap:14px;padding:clamp(16px,2vw,22px) clamp(22px,3vw,34px);border-radius:999px;background:#ededed;color:#0a0a0a;font-size:clamp(16px,2vw,22px);font-weight:500;max-width:100%;box-sizing:border-box">Email me <span>→</span></a>
       <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:15px;color:#a1a1a1">
         <a href="https://github.com/bakill3" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="https://www.linkedin.com/in/gabriel-brandao-2000-pt/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
     <footer style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:100px;padding-top:24px;border-top:1px solid #1c1c1c;font-family:'Geist Mono',monospace;font-size:12px;color:#737373">
-      <span>© {{ year }} Gabriel Brandão</span>
+      <span>© 2026 Gabriel Brandão</span>
       <span data-clock="">Ovar, PT</span>
     </footer>
   </div>
 </section>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ff5a1f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ff5a1f&quot;,&quot;#c8f135&quot;,&quot;#7c9cff&quot;,&quot;#ededed&quot;]},&quot;reduceMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
-class Component extends DCLogic {
-  componentDidMount() { this.applyTheme(); this.cleanups = []; setTimeout(() => this.setup(), 60); }
-  componentDidUpdate() { this.applyTheme(); }
-  componentWillUnmount() { (this.cleanups || []).forEach(f => f()); }
-  applyTheme() { document.body.style.setProperty('--accent', this.props.accent ?? '#ff5a1f'); }
-  setup() {
-    const motion = !(this.props.reduceMotion ?? false) && !matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const ease = 'cubic-bezier(.16,1,.3,1)';
-    const q = s => Array.from(document.querySelectorAll(s));
-    const on = (t, e, f, o) => { t.addEventListener(e, f, o); this.cleanups.push(() => t.removeEventListener(e, f, o)); };
-    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
-    q('[data-word]').forEach((el, i) => {
-      if (!motion) { el.style.opacity = '1'; return; }
-      el.animate([{ opacity: 0, transform: 'translateY(40%)', filter: 'blur(12px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }], { duration: 1100, delay: 150 + i * 70, easing: ease, fill: 'forwards' });
-    });
-    if (motion) q('[data-intro]').forEach((el, i) => el.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, delay: i ? 1000 : 0, easing: ease, fill: 'backwards' }));
-    q('[data-scrollcue]').forEach(el => motion && el.animate([{ transform: 'translateY(-16px)' }, { transform: 'translateY(44px)' }], { duration: 1600, iterations: Infinity, easing: 'cubic-bezier(.65,0,.35,1)' }));
-    q('[data-marquee]').forEach(el => motion && el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 45000, iterations: Infinity }));
+<script>
+(() => {
+  const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ease = 'cubic-bezier(.16,1,.3,1)';
+  const q = s => Array.from(document.querySelectorAll(s));
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
-    const io = new IntersectionObserver(es => es.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target; io.unobserve(el);
-      el.animate([{ opacity: 0, transform: 'translateY(40px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, easing: ease, fill: 'forwards' });
-      el.querySelectorAll('[data-count]').forEach(c => this.countUp(c));
-    }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    if (motion) q('[data-reveal]').forEach(el => { el.style.opacity = '0'; io.observe(el); });
-    this.cleanups.push(() => io.disconnect());
+  // Hero words + intro
+  q('[data-word]').forEach((el, i) => {
+    if (!motion) { el.style.opacity = '1'; return; }
+    el.animate([{ opacity: 0, transform: 'translateY(40%)', filter: 'blur(12px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }], { duration: 1100, delay: 150 + i * 70, easing: ease, fill: 'forwards' });
+  });
+  if (motion) q('[data-intro]').forEach((el, i) => el.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, delay: i ? 1000 : 0, easing: ease, fill: 'backwards' }));
+  q('[data-scrollcue]').forEach(el => motion && el.animate([{ transform: 'translateY(-16px)' }, { transform: 'translateY(44px)' }], { duration: 1600, iterations: Infinity, easing: 'cubic-bezier(.65,0,.35,1)' }));
+  q('[data-marquee]').forEach(el => motion && el.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], { duration: 45000, iterations: Infinity }));
 
-    const fans = q('[data-fan]'), strips = q('[data-strip]');
-    const tl = document.querySelector('[data-timeline]'), prog = document.querySelector('[data-progress]'), dots = q('[data-tl-dot]');
-    let raf = 0;
-    const tick = () => {
-      raf = 0; const vh = innerHeight;
-      fans.forEach(f => {
-        const r = f.getBoundingClientRect();
-        let p = motion ? clamp((vh - r.top) / (vh * 0.75), 0, 1) : 1;
-        p = 1 - Math.pow(1 - p, 3);
-        f.querySelectorAll('[data-fan-card]').forEach(c => {
-          const o = +c.dataset.fanCard; if (!o) return;
-          c.style.transform = `translateX(${o * p * 64}%) translateY(${p * 5}%) rotate(${o * p * 9}deg) scale(${1 - p * 0.06})`;
-        });
-      });
-      strips.forEach(s => {
-        const t = s.firstElementChild; const max = t.scrollWidth - s.clientWidth;
-        if (max <= 0) { t.style.transform = 'none'; return; }
-        const r = s.getBoundingClientRect();
-        const p = motion ? clamp((vh - r.top) / (vh + r.height), 0, 1) : 0;
-        t.style.transform = `translateX(${-p * max}px)`;
-      });
-      if (tl && prog) {
-        const r = tl.getBoundingClientRect();
-        prog.style.transform = `scaleY(${clamp((vh * 0.6 - r.top) / r.height, 0, 1)})`;
-        dots.forEach(d => { const lit = d.getBoundingClientRect().top < vh * 0.6; d.style.background = lit ? 'var(--accent)' : '#0a0a0a'; d.style.borderColor = lit ? 'var(--accent)' : '#444'; });
-      }
-    };
-    const onScroll = () => { if (!raf) raf = requestAnimationFrame(tick); };
-    on(window, 'scroll', onScroll, { passive: true }); on(window, 'resize', onScroll); tick();
-    if (!motion) strips.forEach(s => { s.style.overflowX = 'auto'; });
-
-    q('[data-magnetic]').forEach(el => {
-      if (!motion) return;
-      el.style.transition = 'translate .5s cubic-bezier(.16,1,.3,1), background .3s, color .3s, border-color .3s';
-      on(el, 'mousemove', e => { const r = el.getBoundingClientRect(); el.style.translate = `${(e.clientX - r.left - r.width / 2) * .25}px ${(e.clientY - r.top - r.height / 2) * .35}px`; });
-      on(el, 'mouseleave', () => { el.style.translate = '0 0'; });
-    });
-
-    const cur = document.querySelector('[data-cursor]');
-    if (cur && matchMedia('(hover: hover)').matches) on(window, 'mousemove', e => {
-      cur.style.translate = `${e.clientX}px ${e.clientY}px`;
-      const v = e.target.closest && e.target.closest('[data-view]');
-      cur.style.scale = v ? '1' : '0';
-      if (v) cur.textContent = v.dataset.view;
-    });
-
-    this.field(motion);
-
-    const clk = document.querySelector('[data-clock]');
-    if (clk) { const upd = () => clk.textContent = 'Ovar, PT · ' + new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Lisbon', hour: '2-digit', minute: '2-digit' }); upd(); const id = setInterval(upd, 30000); this.cleanups.push(() => clearInterval(id)); }
-  }
-  countUp(el) {
+  // Count-up numbers
+  const countUp = el => {
     const target = +el.dataset.count, t0 = performance.now();
     const step = now => { const p = Math.min(1, (now - t0) / 1600); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(step); };
     el.textContent = '0'; requestAnimationFrame(step);
-  }
-  field(motion) {
+  };
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target; io.unobserve(el);
+    el.animate([{ opacity: 0, transform: 'translateY(40px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, easing: ease, fill: 'forwards' });
+    el.querySelectorAll('[data-count]').forEach(countUp);
+  }), { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  if (motion) q('[data-reveal]').forEach(el => { el.style.opacity = '0'; io.observe(el); });
+
+  // Scroll-driven: screenshot fan, screenshot strips, timeline progress
+  const fans = q('[data-fan]'), strips = q('[data-strip]');
+  const tl = document.querySelector('[data-timeline]'), prog = document.querySelector('[data-progress]'), dots = q('[data-tl-dot]');
+  let raf = 0;
+  const tick = () => {
+    raf = 0; const vh = innerHeight;
+    fans.forEach(f => {
+      const r = f.getBoundingClientRect();
+      let p = motion ? clamp((vh - r.top) / (vh * 0.75), 0, 1) : 1;
+      p = 1 - Math.pow(1 - p, 3);
+      f.querySelectorAll('[data-fan-card]').forEach(c => {
+        const o = +c.dataset.fanCard; if (!o) return;
+        c.style.transform = `translateX(${o * p * 64}%) translateY(${p * 5}%) rotate(${o * p * 9}deg) scale(${1 - p * 0.06})`;
+      });
+    });
+    strips.forEach(s => {
+      const t = s.firstElementChild; const max = t.scrollWidth - s.clientWidth;
+      if (max <= 0) { t.style.transform = 'none'; return; }
+      const r = s.getBoundingClientRect();
+      const p = motion ? clamp((vh - r.top) / (vh + r.height), 0, 1) : 0;
+      t.style.transform = `translateX(${-p * max}px)`;
+    });
+    if (tl && prog) {
+      const r = tl.getBoundingClientRect();
+      prog.style.transform = `scaleY(${clamp((vh * 0.6 - r.top) / r.height, 0, 1)})`;
+      dots.forEach(d => { const lit = d.getBoundingClientRect().top < vh * 0.6; d.style.background = lit ? 'var(--accent)' : '#0a0a0a'; d.style.borderColor = lit ? 'var(--accent)' : '#444'; });
+    }
+  };
+  const onScroll = () => { if (!raf) raf = requestAnimationFrame(tick); };
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); tick();
+  if (!motion) strips.forEach(s => { s.style.overflowX = 'auto'; });
+
+  // Magnetic buttons
+  q('[data-magnetic]').forEach(el => {
+    if (!motion) return;
+    el.style.transition = 'translate .5s cubic-bezier(.16,1,.3,1), background .3s, color .3s, border-color .3s';
+    el.addEventListener('mousemove', e => { const r = el.getBoundingClientRect(); el.style.translate = `${(e.clientX - r.left - r.width / 2) * .25}px ${(e.clientY - r.top - r.height / 2) * .35}px`; });
+    el.addEventListener('mouseleave', () => { el.style.translate = '0 0'; });
+  });
+
+  // "View" cursor over project rows
+  const cur = document.querySelector('[data-cursor]');
+  if (cur && matchMedia('(hover: hover)').matches) addEventListener('mousemove', e => {
+    cur.style.translate = `${e.clientX}px ${e.clientY}px`;
+    const v = e.target.closest && e.target.closest('[data-view]');
+    cur.style.scale = v ? '1' : '0';
+    if (v) cur.textContent = v.dataset.view;
+  });
+
+  // Hero dot field
+  (() => {
     const cv = document.querySelector('[data-field]'); if (!cv) return;
     const hero = document.querySelector('[data-hero]');
     const ctx = cv.getContext('2d'); const dpr = Math.min(2, devicePixelRatio || 1);
-    let W = 0, H = 0, mx = 0, my = 0, sx = 0, sy = 0, act = 0, inside = false, visible = true, raf;
+    let W = 0, H = 0, mx = 0, my = 0, sx = 0, sy = 0, act = 0, inside = false, visible = true;
     const ripples = [];
     const size = () => { const r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
     size();
     const local = (x, y) => { const r = cv.getBoundingClientRect(); return [x - r.left, y - r.top]; };
     const move = (x, y) => { [mx, my] = local(x, y); inside = my >= 0 && my <= H; if (act < 0.01) { sx = mx; sy = my; } };
-    const onMove = e => move(e.clientX, e.clientY);
-    const onTouch = e => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); };
-    const onDown = e => { const [x, y] = local(e.clientX, e.clientY); if (y >= 0 && y <= H && motion) { ripples.push({ x, y, t0: performance.now() }); if (ripples.length > 4) ripples.shift(); } };
-    const onLeave = () => { inside = false; };
-    window.addEventListener('mousemove', onMove); window.addEventListener('touchmove', onTouch, { passive: true });
-    window.addEventListener('pointerdown', onDown); document.addEventListener('mouseleave', onLeave); window.addEventListener('resize', size);
-    const vio = new IntersectionObserver(([e]) => { visible = e.isIntersecting; }); vio.observe(hero);
+    addEventListener('mousemove', e => move(e.clientX, e.clientY));
+    addEventListener('touchmove', e => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
+    addEventListener('pointerdown', e => { const [x, y] = local(e.clientX, e.clientY); if (y >= 0 && y <= H && motion) { ripples.push({ x, y, t0: performance.now() }); if (ripples.length > 4) ripples.shift(); } });
+    document.addEventListener('mouseleave', () => { inside = false; });
+    addEventListener('resize', size);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(hero);
     const G = 26, R = 190, TAU = Math.PI * 2;
     const draw = t => {
-      raf = requestAnimationFrame(draw);
+      requestAnimationFrame(draw);
       if (!visible) return;
       sx += (mx - sx) * 0.1; sy += (my - sy) * 0.1;
       act += ((inside ? 1 : 0) - act) * 0.06;
@@ -403,54 +592,13 @@ class Component extends DCLogic {
       }
       ctx.globalAlpha = 1;
     };
-    raf = requestAnimationFrame(draw);
-    this.cleanups.push(() => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); window.removeEventListener('touchmove', onTouch); window.removeEventListener('pointerdown', onDown); document.removeEventListener('mouseleave', onLeave); window.removeEventListener('resize', size); vio.disconnect(); });
-  }
-  renderVals() {
-    const tools = ['Rust', 'Flutter', 'Swift', 'React', 'Node.js', 'PHP', 'Kubernetes', 'NATS', 'PostgreSQL', 'gRPC', 'Core ML', 'Docker'];
-    return {
-      year: new Date().getFullYear(),
-      marquee: [...tools, ...tools],
-      scalaShots: [1, 2, 3, 4, 5, 6].map(i => `assets/img/apps/scala-${i}.webp`),
-      glance: [
-        { k: 'MOST RECENT', v: 'Full Stack Engineer at XCOPE AI' },
-        { k: 'EXPERIENCE', v: '9 years, 3 product companies + own startups' },
-        { k: 'CORE STACK', v: 'Rust, Flutter, Swift, React, Node.js, PHP' },
-        { k: 'LOCATION', v: 'Portugal · remote or hybrid' },
-      ],
-      facts: [
-        { n: 200, suffix: 'K+', label: 'Downloads on ', link: 'StoryStalkers', href: 'https://github.com/bakill3/StoryStalkers' },
-        { n: 100, suffix: 'K+', label: 'Reddit views on side projects' },
-        { n: 2017, suffix: '', label: 'First professional project shipped' },
-        { n: 2, suffix: '', label: 'Apps live on the App Store' },
-      ],
-      projects: [
-        { n: '01', name: 'ChatMind', desc: 'Local-first AI dashboard that learns your writing style from chat logs and replies like you. LLaMA, fully offline.', tag: 'AI · PHP', href: 'https://github.com/bakill3/chatmind', cta: 'Repo ↗' },
-        { n: '02', name: 'Maze of Me', desc: 'Psychological game built from your own Spotify and Google data, with AI NPCs. Praised by Meta for Developers.', tag: 'Game · Python', href: 'https://github.com/bakill3/maze-of-me', cta: 'Repo ↗' },
-        { n: '03', name: 'Cavemen', desc: 'Browser extension that makes ChatGPT, Claude and Gemini answer shorter.', tag: 'Chrome Extension', href: 'https://github.com/bakill3/cavemen-web', cta: 'Repo ↗' },
-        { n: '04', name: 'Anchorly', desc: 'Chrome extension to highlight, organize and jump back to text on any page.', tag: 'Chrome Extension', href: 'https://chromewebstore.google.com/detail/anchorly/gkidejbpflnmjbdkpmpfehchlamchhej', cta: 'Install ↗' },
-        { n: '05', name: 'Tap&Go', desc: 'NFC review system with analytics dashboards, Instagram discounts and a cocktail recommender.', tag: 'Startup', href: 'https://tapgotech.com/', cta: 'Visit ↗' },
-        { n: '06', name: 'AMS', desc: 'Secure messaging using atmospheric noise for true-random encryption keys. PHP, Redis, Docker.', tag: 'Security', href: 'https://github.com/bakill3/AMS', cta: 'Repo ↗' },
-        { n: '07', name: 'StoryStalkers', desc: 'Instagram story viewer web + Android app. 200K+ Play Store downloads before API shutdown.', tag: '2018–2020', href: 'https://github.com/bakill3/StoryStalkers', cta: 'Repo ↗' },
-      ],
-      jobs: [
-        { dates: 'Dec 2025 – Jun 2026', place: 'Porto, hybrid', company: 'XCOPE AI', stack: 'Rust · Flutter · NATS · SSE', href: 'https://www.xcope.ai/', role: 'Full Stack Engineer', summary: 'Backend and mobile apps in Rust and Flutter. QR/GPS clock-ins, real-time updates over NATS/SSE, and modules for planning, monitoring, fleet and reporting.' },
-        { dates: 'Oct 2024 – Oct 2025', place: 'Remote', company: 'Atlistis', stack: 'React · Node.js · Sharetribe · Kotlin · Swift · Stripe', href: 'https://www.atlistis.com/', role: 'Full Stack Developer', summary: 'Marketplace features in React, Node and Sharetribe. Native Kotlin and Swift apps with push, Stripe webhooks with VAT invoicing, booking logic refactor and live hotel sync via HyperGuest.' },
-        { dates: 'Nov 2023 – Jun 2024', place: 'Remote', company: 'Learnship Networks', stack: 'PHP · Node.js · CQRS · gRPC · RabbitMQ · Kubernetes', href: 'https://learnship.com/', role: 'Junior Software Engineer (PHP)', summary: 'Event-driven backends with Mezzio, Node and Ecotone CQRS over EventBridge, gRPC and RabbitMQ. Deployed on AKS with Helm and GitHub Actions; Karate tests and Datadog monitoring.' },
-        { dates: 'Jun – Nov 2023', place: 'On-site', company: 'Tap&Go', stack: 'PHP · JavaScript · NFC · Analytics', href: 'https://tapgotech.com/', role: 'Founder & Developer', summary: 'NFC-based review system with analytics dashboards, Instagram discounts and a cocktail recommendation engine.' },
-        { dates: 'May – Nov 2023', place: 'Remote', company: 'AlaskaRecover', stack: 'Shopify · SEO · Partnerships', href: 'https://alaskarecover.com/', role: 'Lead Developer', summary: 'Led tech for Portugal’s top ice bath provider and secured Amazon and Decathlon partnerships.' },
-        { dates: '2020 – 2022', place: 'Remote', company: 'Freelance', stack: 'Shopify · WordPress · Python · AI', href: 'https://www.upwork.com/', role: 'Upwork · Fiverr · Freelancer', summary: 'Full-stack builds, SEO, Shopify and WordPress, facial recognition and speech AI, while studying.' },
-        { dates: '2018 – 2020', place: 'Remote', company: 'StoryStalkers', stack: 'PHP · Java · Android · Firebase', href: 'https://github.com/bakill3/StoryStalkers', role: 'Founder & Developer', summary: 'Instagram story viewer with 200K+ downloads, a custom API and extended analytics.' },
-      ],
-      stack: [
-        { group: 'Languages', items: 'JavaScript, PHP, Rust, Dart, Swift, Python, SQL, C/C++, C#, Java' },
-        { group: 'Frameworks', items: 'Flutter, React, Node.js, SwiftUI, Symfony, Mezzio' },
-        { group: 'Architecture & Data', items: 'EDA, CQRS, gRPC, RabbitMQ, NATS, PostgreSQL, MySQL, MongoDB, Redis, EventStoreDB' },
-        { group: 'Cloud & DevOps', items: 'Docker, Kubernetes, Helm, Terraform, Azure, AWS, GitHub Actions, Codemagic, Datadog' },
-      ],
-    };
-  }
-}
+    requestAnimationFrame(draw);
+  })();
+
+  // Local time in the footer
+  const clk = document.querySelector('[data-clock]');
+  if (clk) { const upd = () => clk.textContent = 'Ovar, PT · ' + new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Lisbon', hour: '2-digit', minute: '2-digit' }); upd(); setInterval(upd, 30000); }
+})();
 </script>
 </body>
 </html>
